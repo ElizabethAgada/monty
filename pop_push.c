@@ -7,8 +7,8 @@
  */
 void se_pop(stack_t **stack, unsigned int line_num)
 {
-	stack_t *temp = *stack; // Temporary pointer to the top of the stack
-	// Check if the stack or the top element is NULL
+	stack_t *temp = *stack; /*Temporary pointer to the top of the stack*/
+	/*Check if the stack or the top element is NULL*/
 	f (!stack || !*stack)
 	{
 		// Print an error message, free the stack, and exit with failure status
