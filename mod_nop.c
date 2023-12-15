@@ -57,7 +57,7 @@ void se_nop(stack_t **stack, unsigned int line_num)
 	/*The se_nop function does nothing and has no effect on the stack*/
 	/*it is used as a placeholder for the "nop" operation in the Monty language*/
 
-	//The (void) statements are used to suppress "unused parameter" warnings
+	/*The (void) statements are used to suppress "unused parameter" warnings*/
 	(void)stack;
 	(void)line_num:
 }
