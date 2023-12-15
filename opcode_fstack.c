@@ -10,17 +10,13 @@ void get_opcode(stack_t **stack, unsigned int line_num, char *se_cmd)
 	/* Declare an index variable for iterating through the instruction array */
 	int index = 0;
 
-	/* Define an array of structures, each containing an opcode*/
-	/*its corresponding function*/
+	/*Define anArray ofStructures,containing an opcode its correspondingFunction*/
 	instruction_t codes[] = {
-		{"push", se_push}, {"pall", se_pall},
-		{"pint", se_pint}, {"pop", se_pop},
-		{"swap", se_swap}, {"add", se_add},
-		{"sub", se_sub}, {"div", se_div},
-		{"mul", se_mul}, {"nop", se_nop},
-		{"mod", se_mod}, {"\0", NULL}
+		{"push", se_push}, {"pall", se_pall}, {"pint", se_pint}, {"pop", se_pop},
+		{"swap", se_swap}, {"add", se_add}, {"sub", se_sub}, {"div", se_div},
+		{"mul", se_mul}, {"nop", se_nop}, {"mod", se_mod}, {"\0", NULL}
 	};
-	/*Check if the opcode starts with '#' (comment), and if so, ignore it */
+	/*Check if the opcode starts with '#' (comment), and if so, ignore it*/
 	if (se_cmd[0] == '#')
 		return;
 	/*Check if the opcode is "queue" and set the stack/queue mode accordingly*/
@@ -38,15 +34,13 @@ void get_opcode(stack_t **stack, unsigned int line_num, char *se_cmd)
 	/*Iterate through the array of structures to find a matching opcode */
 	while (codes[index].opcode != NULL)
 	{
-		/*If a matching opcode is found,*/
-		/*execute its corresponding function & return*/
+		/*If a matching opcode is found,execute its corresponding function & return*/
 		if (strcmp(codes[index].opcode, se_cmd) == 0)
 		{
 			codes[index].f(stack, line_num);
 			return;
 		}
-		/* Move to the next element in the array */
-		index++;
+		index++; /* Move to the next element in the array */
 	}
 	/* If no matching opcode is found, print an error message,*/
 	/*free the stack, and exit with failure status*/

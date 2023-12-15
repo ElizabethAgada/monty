@@ -13,7 +13,7 @@ void veigar(stack_t **stack, stack_t *fresh)
 
 	/* Set the 'n' value of the new node to the converted integer*/
 	/*value of the argument */
-	fresh->n = atoi(argument_container.se-arg);
+	fresh->n = atoi(argument_container.se_arg);
 
 	/* Check if the stack is wmpty */
 	if (!*stack)
@@ -30,10 +30,10 @@ void veigar(stack_t **stack, stack_t *fresh)
 		temp = *stack;
 		while (temp->next != NULL)
 			temp = temp->next;
-		
+
 		/* Set the 'next' pointer of the previous last node to the new node */
 		temp->next = fresh;
-		
+
 		/* Set the 'prev' pointer of the new node to the previous last node */
 	fresh->prev = temp;
 	}
