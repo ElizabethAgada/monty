@@ -26,7 +26,7 @@ void veigar(stack_t **stack, stack_t *fresh)
 	else
 	{
 		/* if the stack is not empty, traverse to the end of the queue*/
-		//and add the new node
+		/*and add the new node*/
 		temp = *stack;
 		while (temp->next != NULL)
 			temp = temp->next;
