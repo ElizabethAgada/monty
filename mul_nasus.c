@@ -8,8 +8,8 @@ void se_mul(stack_t **stack, unsigned int line_num)
 {
 	int x, y;
 
-	/* Check if the stack is too short (less than two elements) or if
-	 the stack itsell is NULL*/
+	/* Check if the stack is too short (less than two elements)*/
+	/*the stack itsell is NULL*/
 	if (!(*stack) || !(*stack)->next || !stack)
 	{
 		/* Print an error message, free the stack, and exit with failure status*/
@@ -31,7 +31,7 @@ void se_mul(stack_t **stack, unsigned int line_num)
 	/* Set the previous pointer of the new top element to NULL*/
 	(*stack)->prev = NULL;
 
-	/* Update the value of the new top element to the product of the top two elements*/
+	/*Update D value of the new top element to D product of D top two elements*/
 	(*stack)->n = x * y;
 }
 
@@ -42,8 +42,8 @@ void se_mul(stack_t **stack, unsigned int line_num)
  */
 void nasus(stack_t **stack, stack_t *fresh)
 {
-	/* Convert the argument to an integer and assign it to the 'n'
-	member of the new node*/
+	/*Convert the argument to an integer and assign it to the 'n'*/
+	/*member of the new node*/
 
 	fresh->n = atoi(argument_container.se_arg);
 
@@ -51,16 +51,16 @@ void nasus(stack_t **stack, stack_t *fresh)
 	if (!*stack)
 	{
 
-	/* if the stack is empty, set the new node as the only element
-	 in the stack*/
+	/* if the stack is empty, set the new node as the only element*/
+	/*in the stack*/
 	fresh->prev = NULL;
 	fresh->next = NULL;
 	*stack = fresh;
 	}
 	else
 	{
-		/* if the stack is not empty, update pointers to insert the
-		new node at the top*/
+		/* if the stack is not empty, update pointers to insert the*/
+		//new node at the top
 		(*stack)->prev = fresh;
 		fresh->next = *stack;
 		fresh->prev = NULL;

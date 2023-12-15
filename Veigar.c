@@ -11,22 +11,22 @@ void veigar(stack_t **stack, stack_t *fresh)
 	/* Initialize the 'next' pointer of the new node to NULL */
 	fresh->next = NULL;
 
-	/* Set the 'n' value of the new node to the converted integer
-	value of the argument */
+	/* Set the 'n' value of the new node to the converted integer*/
+	/*value of the argument */
 	fresh->n = atoi(argument_container.se-arg);
 
 	/* Check if the stack is wmpty */
 	if (!*stack)
 	{
-		/* if the stack is empty, set the 'prev' pointer of the new
-		node to NULL and update the stack */
+		/* if the stack is empty, set the 'prev' pointer of the new*/
+		/*node to NULL and update the stack */
 		fresh->prev = NULL;
 		*stack = fresh;
 	}
 	else
 	{
-		/* if the stack is not empty, traverse to the end of the queue
-		and add the new node */
+		/* if the stack is not empty, traverse to the end of the queue*/
+		//and add the new node
 		temp = *stack;
 		while (temp->next != NULL)
 			temp = temp->next;
