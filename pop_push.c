@@ -76,5 +76,5 @@ void se_push(stack_t **stack, unsigned int line_num)
 	if (argument_container.se_stackqueue == 0)
 	nasus(stack, fresh); /*Push to stack*/
 	else
-		veigar(stack, fresh); // Push to queue
+		veigar(stack, fresh); /*Push to queue*/
 }
