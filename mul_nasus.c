@@ -60,7 +60,7 @@ void nasus(stack_t **stack, stack_t *fresh)
 	else
 	{
 		/* if the stack is not empty, update pointers to insert the*/
-		//new node at the top
+		/*new node at the top*/
 		(*stack)->prev = fresh;
 		fresh->next = *stack;
 		fresh->prev = NULL;
