@@ -1,4 +1,6 @@
+#define _GNU_SOURCE
 #include "monty.h"
+
 /**
  * se_add - adds the top two elements of the stack
  * @stack: double pointer to the stack
@@ -34,7 +36,6 @@ void se_add(stack_t **stack, unsigned int line_num)
 	(*stack)->n = x + y;
 }
 
-#include "monty.h"
 
 /**
  * create_buff - Reads and processes commands from a file
@@ -57,7 +58,7 @@ void create_buff(char *file_name)
 		exit(EXIT_FAILURE);
 	}
 	/*Store the file pointer in the global variable for later access*/
-	argument_container.sefil_file = se_file;
+	argument_container.se_file = se_file;
 	/*Read lines from the file using getline*/
 	while (getline(&str, &size, se_file) != -1)
 	{

@@ -40,8 +40,8 @@ void se_sub(stack_t **stack, unsigned int line_num)
 	}
 
 	/*Get the values of the top two elements in the stack*/
-	x = (*stack)->n
-		y = (*stack)->next->n;
+	x = (*stack)->n;
+	y = (*stack)->next->n;
 	/* Move the stack pointer to the next element */
 	*stack = (*stack)->next;
 	/*Free the previous top element */

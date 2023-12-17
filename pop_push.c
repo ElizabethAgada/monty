@@ -21,8 +21,8 @@ void se_pop(stack_t **stack, unsigned int line_num)
 	if (!temp->next)
 	{
 		/*Free the top element and set the stack to NULL*/
-		ree(*stack);
-		*stack - NULL;
+		free(*stack);
+		*stack = NULL;
 	}
 	else
 	{

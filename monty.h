@@ -54,7 +54,7 @@ typedef struct se_struct
 	FILE *se_file;
 } se_variables;
 
-extern se_variables argument container;
+extern se_variables argument_container;
 se_variables argument_container;
 
 int isnum(char *str);
@@ -75,4 +75,4 @@ void se_mod(stack_t **stack, unsigned int line_num);
 void nasus(stack_t **stack, stack_t *fresh);
 void veigar(stack_t **stack, stack_t *fresh);
 
-*endif /*HEADER FILE*/
+#endif /*HEADER FILE*/
